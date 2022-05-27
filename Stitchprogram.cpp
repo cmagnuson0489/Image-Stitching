@@ -13,7 +13,7 @@ using namespace cv;
 Stitched::Mode mode = Stitched::PANORAMA;
 
 // This will be our array for the images that we will have
-vector<Mat> images;
+vector<Picture> images;
 
 int main(int argc, char *argv[])
 {
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     {
         // Read the ith argument or image
         // and push into the image array
-        Mat img = imread(argv[i]);
+        Picture img = imread(argv[i]);
         if (img.empty())
         {
             // Exit if image is not present
@@ -30,3 +30,11 @@ int main(int argc, char *argv[])
             return -1;
         }
         images.push_back(img);
+
+      }
+
+    Picture panorama;
+
+    Ptr<Stitiched> stitched = Stitched::create(mode, false);
+
+    
