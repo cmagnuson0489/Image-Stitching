@@ -7,10 +7,10 @@
 # Multi Image Stitiching
 
 - I plan to expand this program to allow you to stitch more than two images at a time. 
-- As a part of stitching multiple images this program will be able to perform automatic and alignment of images into a sequence to create a larger panormama.
+- As a part of stitching multiple images this program will be able to perform automatic and alignment of images into a sequence to create a larger panorama.
 
 # User Input
-- Provide options for users to manually adjust the keypoints or regions of interest if the automatic stitching doesn’t provide satisfactory results. T
+- Provide options for users to manually adjust the keypoints or regions of interest if the automatic stitching doesn’t provide satisfactory results. 
 - This will be helpful in cases where automatic feature matching fails.
 
 # Error Handling and Feedback
