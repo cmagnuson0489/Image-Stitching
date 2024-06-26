@@ -14,7 +14,7 @@
 - This will be helpful in cases where automatic feature matching fails.
 
 # Error Handling and Feedback
-- Implement comprehensive error handling to deal with different failure modes (e.g., no features found, poor matches). P
+- Implement comprehensive error handling to deal with different failure modes (e.g., no features found, poor matches). 
 - Provide useful feedback to the user about what might have gone wrong.
 
 # Make this program easily accessible
