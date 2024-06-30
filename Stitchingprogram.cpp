@@ -13,7 +13,6 @@ using namespace std;
 using namespace cv;
 
 // Define mode for stitching as panorama
-// (One out of many functions of Stitcher)
 Stitched::Mode mode = Stitched::PANORAMA;
 
 // Array for pictures
@@ -36,17 +35,22 @@ int main(int argc, char *argv[])
         }
         images.push_back(img);
     }
+    if (images.size() <2)
+    {
+        cout << "Warning. You need at least two images to stitch\n";
+        return -1;
+    }
 
     // Define object to store the stitched image
     Mat panorama;
 
     // Create a Stitcher class object with mode panoroma
-    Ptr<Stitched> stitched = Stitched::create(mode, false);
+    Ptr<Stitcher> stitcher = Stitcher::create(mode, false);
 
     // Command to stitch all the images present in the image array
-    Stitched::Status status = stitched->stitch(imgs, pano);
+    Stitched::Status status = stitcher->stitch(imgs, panorama);
 
-    if (status != Stitched::OK)
+    if (status != Stitcher::OK)
     {
         // Check if images could not be stitched
         // status is OK if images are stitched successfully
