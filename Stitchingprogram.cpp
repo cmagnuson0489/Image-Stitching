@@ -52,6 +52,14 @@ int main(int argc, char *argv[])
 
     if (status != Stitcher::OK)
     {
+        switch (status)
+        {
+        case Stitcher::ERR_NEED_MOREIMGS:
+           cout << "Error: Please provide more images to perform stitiching.\n;"
+           break;
+        case Stitcher::ERR_HOMOGRAPHY_EST_FAIL:
+           cout << "Error: Homogrpahy estimation has failed. This can happen if there is a lack of overlap between images or insufficient feature matching.\n";
+        }
         // Check if images could not be stitched
         // status is OK if images are stitched successfully
         cout << "Sorry. Unable to stitch the images that were provided\n";
