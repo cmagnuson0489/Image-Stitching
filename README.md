@@ -20,4 +20,4 @@
 # Make this program easily accessible
 
 - Create a web interface for the  program.  
-- I may possubly use a framework like Flask or Django for the backend, which can handle C++ executable calls or Python equivalents.
+- I may possibly use a framework like Flask or Django for the backend, which can handle C++ executable calls or Python equivalents.
