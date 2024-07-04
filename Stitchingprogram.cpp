@@ -73,9 +73,12 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    // Store a new image stitched from the given
-    // set of images as "result.jpg"
-    imwrite("result.jpg", panorama);
+    // Store a new image stitched from the given set of images as "result.jpg"
+    if(!imwrite("result.jpg", panorama))
+    {
+        cout << "Error: Unable to save the stitchyed image. Please check your directory permissions.\n";
+        return -1;
+    }
 
     // Show the result
     imshow("Result", panorama);
